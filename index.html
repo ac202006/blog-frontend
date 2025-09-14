@@ -31,45 +31,48 @@
   <body>
     <section class="container">
       <div class="background-image site-thumbnail">
-        <img src="images/background.jpg" alt="背景图片" id="background-image"/>
+        <img src="images/background.png" alt="背景图片" id="background-image"/>
         <div class="overlay">
-          <h1>欢迎来到我的前端学习测试网站</h1>
-          <p>这是一个用于个人学习前端技术的测试网站.</p>
+          <figure>
+            <h1>欢迎来到我的前端学习测试网站</h1>
+            <p>这是一个用于个人学习前端技术的测试网站.</p>
+          </figure>
         </div>
       </div>
+      <div class="wave"></div>
       <div id="page" class="site-wrapper">
         <header>
           <div id="logo">
-            <img src="images/favicon.png" alt="网站Logo" width="50" height="50" />
+            <img src="images/favicon.png" alt="网站Logo" width="40" height="40" />
             <span>前端学习测试网站</span>
           </div>
           <nav id="main-nav">
             <ul>
               <li>
-                <div class="search-container">
-                  <button class="search-button">
+                <div class="search-container button" title="搜索">
+                  <button class="search-button" for="search-input">
                     <i class="fas fa-search"></i>
                   </button>
-                  <input type="text" class="search-input" />
+                  <input type="text" class="search-input" id="search-input"/>
                 </div>
               </li>
               <li>
                 <button
-                  class="home-button"
-                  onclick="location.href='index.html'"
+                  class="button"
+                  onclick="location.href='index.html'" title="首页"
                 >
                   <i class="fas fa-home"></i>
                 </button>
               </li>
               <li>
-                <button class="blog-button" onclick="location.href='blog.html'">
+                <button class="button" onclick="location.href='blog.html'" title="博客">
                   <i class="fas fa-blog"></i>
                 </button>
               </li>
               <li>
                 <button
-                  class="clouddrive-button"
-                  onclick="location.href='clouddrive.html'"
+                  class="button"
+                  onclick="location.href='clouddrive.html'" title="云盘"
                 >
                   <i class="fas fa-cloud"></i>
                 </button>
@@ -79,60 +82,68 @@
         </header>
         <div class="main-content">
           <main>
-            <h1 class="main-title">Discovery</h1>
+            <div class="main-title">
+              <i class="fas fa-history"></i>
+              <span>Discovery</span>
+              <hr />
+            </div>
             <article class="post">
               <div class="post-thumbnail">
                 <img src="images/post1.jpg" alt="文章缩略图" />
               </div>
-              <h2 class="post-title">探索前端技术</h2>
+              <div class="post-content">
+                <h2 class="post-title">测试文本测试文本测试文本测试文本</h2>
               <div class="post-date"><i class="fas fa-calendar-alt"></i> 2023-03-15</div>
               <p class="post-excerpt">
-                在这个网站上，你将发现关于HTML、CSS和JavaScript的各种资源和教程。
+                测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本。
               </p>
+              </div>
             </article>
             <article class="post">
               <div class="post-thumbnail">
                 <img src="images/post1.jpg" alt="文章缩略图" />
               </div>
-              <h2 class="post-title">探索前端技术</h2>
+              <div class="post-content">
+                <h2 class="post-title">测试文本</h2>
               <div class="post-date"><i class="fas fa-calendar-alt"></i> 2023-03-15</div>
               <p class="post-excerpt">
-                在这个网站上，你将发现关于HTML、CSS和JavaScript的各种资源和教程。
+                测试文本测试文本测试文本测试文本测试文本测试文本。
               </p>
+              </div>
             </article>
             <article class="post">
               <div class="post-thumbnail">
                 <img src="images/post1.jpg" alt="文章缩略图" />
               </div>
-              <h2 class="post-title">探索前端技术</h2>
+              <div class="post-content">
+                <h2 class="post-title">测试文本</h2>
               <div class="post-date"><i class="fas fa-calendar-alt"></i> 2023-03-15</div>
               <p class="post-excerpt">
-                在这个网站上，你将发现关于HTML、CSS和JavaScript的各种资源和教程。
+                测试文本测试文本测试文本测试文本测试文本。
               </p>
+              </div>
             </article>
             <article class="post">
               <div class="post-thumbnail">
                 <img src="images/post1.jpg" alt="文章缩略图" />
               </div>
-              <h2 class="post-title">探索前端技术</h2>
+              <div class="post-content">
+                <h2 class="post-title">测试文本测试文本测试文本</h2>
               <div class="post-date"><i class="fas fa-calendar-alt"></i> 2023-03-15</div>
               <p class="post-excerpt">
-                在这个网站上，你将发现关于HTML、CSS和JavaScript的各种资源和教程。
+                测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本。
               </p>
+              </div>
             </article>
           </main>
         </div>
         <footer>
-          <div class="footer-content">
-            <p>&copy; 2025 前端学习测试网站. 保留所有权利.</p>
-            <p>
-              由
-              <a href="https://example.com" target="_blank" rel="noopener"
-                >AC_101_</a
-              >
-              创建.
-            </p>
-          </div>
+          <p class="copyright">&copy; 2025 AC_101_</p>
+          <span class="connect">
+            <a href="https://github.com/ac202006"><i class="fab fa-github"></i></a>
+            <a href="mailto:ac202006@ac101.site"><i class="fa fa-envelope"></i></a>
+            <a href="https://steamcommunity.com/id/3481705120/"><i class="fab fa-steam"></i></a>
+          </span>
         </footer>
       </div>
     </section>
