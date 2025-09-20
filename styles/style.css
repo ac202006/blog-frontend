@@ -324,7 +324,6 @@ header.scrolled {
 
 footer {
   background: transparent;
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -422,7 +421,7 @@ body.blog .site-wrapper {
   overflow: hidden;
 }
 
-.blog-header-image {
+.blog-header-image{
   width: 100%;
   height: 30vh;
   object-fit: cover;
@@ -572,6 +571,311 @@ body.blog .blog-info {
   font-size: 1em;
   color: #555;
   box-shadow: 0 2px 5px rgba(63, 63, 63, 0.1);
+}
+
+.write .site-wrapper {
+  margin-top: 0;
+  padding-top: var(--header-h);
+  height: 100vh;
+  width: 100%;
+  min-height: calc(100vh - var(--header-h));
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.write header {
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  backdrop-filter: blur(10px); /* 添加模糊效果 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+}
+
+.write-header-image {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.write-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.write .write-main {
+  background-color: rgba(255, 255, 255, 0.5);
+  max-width: 1160px;
+  height: auto;
+  padding: 20px;
+  margin: 20px auto 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(63, 63, 63, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 文章信息栏样式 */
+.article-info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.info-item span:last-child {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* 编辑器容器样式 */
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  height: 500px;
+}
+
+.editor-panel,
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editor-header,
+.preview-header {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.editor-header h3,
+.preview-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editor-header i,
+.preview-header i {
+  color: #007bff;
+}
+
+.content-textarea {
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: none;
+  background: #fff;
+  color: #333;
+}
+
+.content-textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #007bff;
+}
+
+.content-textarea.default-content {
+  color: #999;
+  font-style: italic;
+}
+
+.preview-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 预览内容样式 */
+.preview-content h1,
+.preview-content h2,
+.preview-content h3,
+.preview-content h4,
+.preview-content h5,
+.preview-content h6 {
+  color: #333;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.preview-content h1 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.preview-content h2 {
+  font-size: 1.5rem;
+}
+
+.preview-content h3 {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.preview-content p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.preview-content code {
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  color: #e83e8c;
+  font-size: 0.85rem;
+}
+
+.preview-content pre {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border-left: 4px solid #007bff;
+  margin: 1rem 0;
+}
+
+.preview-content pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+.preview-content blockquote {
+  border-left: 4px solid #007bff;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-style: italic;
+  background: rgba(0, 123, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.preview-content ul,
+.preview-content ol {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.preview-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* 按钮操作区样式 */
+.editor-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.form-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-image-button {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.add-image-button:hover {
+  background: linear-gradient(135deg, #20c997, #28a745);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.cancel-button {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+}
+
+.cancel-button:hover {
+  background: linear-gradient(135deg, #5a6268, #6c757d);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .editor-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .editor-panel,
+  .preview-panel {
+    height: 300px;
+  }
+  
+  .article-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .editor-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 @keyframes wave-move {
