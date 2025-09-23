@@ -590,6 +590,13 @@ body.blog .blog-info {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
 }
 
+.write-header {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
 .write-header-image {
   width: 100%;
   height: 30vh;
@@ -606,7 +613,7 @@ body.blog .blog-info {
   top: 0;
   left: 0;
   width: 100%;
-  height: 30vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -892,10 +899,6 @@ body.blog .blog-info {
   #main-nav button {
     padding: 8px 12px; /* 减少按钮内边距 */
     font-size: 0.9em; /* 稍微减小字体 */
-  }
-  
-  #main-nav .search-input {
-    width: 120px; /* 缩短搜索框 */
   }
   
   #main-nav li {
