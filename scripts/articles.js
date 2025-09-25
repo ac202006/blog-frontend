@@ -9,7 +9,7 @@ class ArticleList {
     
     async loadArticles() {
         try {
-            const response = await fetch(`${window.API_BASE}/api/articles`);
+            const response = await fetch(`/api/articles`);
             
             if (response.ok) {
                 const articles = await response.json();

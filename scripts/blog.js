@@ -17,7 +17,7 @@ class BlogReader {
     
     async loadArticle(articleId) {
         try {
-            const response = await fetch(`${window.API_BASE}/api/articles/${articleId}`);
+            const response = await fetch(`/api/articles/${articleId}`);
             
             if (response.ok) {
                 const article = await response.json();
