@@ -607,6 +607,25 @@ body.blog .blog-info {
   z-index: 0;
 }
 
+.upload-image-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
 .write-header::before {
   content: '';
   position: absolute;

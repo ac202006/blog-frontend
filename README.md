@@ -48,6 +48,7 @@ test-site/
 - `scripts/articles.js`
 - `scripts/blog.js` 
 - `scripts/write.js`
+- `scripts/config.js`
 
 ## API接口
 
@@ -81,6 +82,10 @@ GET /api/articles/{id}
 3. 右侧会实时预览渲染效果
 4. 第一行会自动提取为文章标题
 5. 点击"发布文章"按钮保存并跳转到文章详情页
+6. 支持图片上传到图床：
+  - 点击“添加图片”按钮选择图片，自动上传到后端（后端再转存到 PicGo）并将外链以 Markdown 插入
+  - 可直接在编辑区粘贴或拖拽图片，效果同上
+  - 可上传封面图（页面顶部上传按钮），封面不会插入正文，只在发布确认时预览
 
 ### 阅读文章
 
@@ -110,6 +115,9 @@ GET /api/articles/{id}
 
 1. 确保后端API服务正常运行再访问前端页面
 2. 默认API地址为 `http://localhost:8000`，可在JavaScript文件中修改
+   - 推荐通过 `scripts/config.js` 设置：
+     - `window.API_BASE = 'http://localhost:8000'`
+     - 可选 `window.PICGO_API_KEY = 'chv_xxx'`（一般不建议前端暴露）
 3. 支持现代浏览器（需要支持ES6+和Fetch API）
 4. 可部署到任何静态网站托管服务（Netlify, Vercel, GitHub Pages等）
 

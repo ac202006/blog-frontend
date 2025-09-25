@@ -30,7 +30,8 @@
     <!-- 引入Marked.js Markdown解析器 -->
     <script src="scripts/markdown.js" defer></script>
     <!-- 引入Markdown处理器 -->
-    <script src="scripts/write.js" defer></script>
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/write.js" defer></script>
     <!-- 引入写作页面脚本 -->
     <script src="scripts/main.js" defer></script>
     <!-- 引入JavaScript脚本 -->
@@ -74,6 +75,9 @@
                 alt="写作头图"
                 class="write-header-image"
               />
+              <button id="upload-cover-button" class="upload-image-button" title="上传头图">
+                <i class="fas fa-upload"></i>
+              </button>
             </div>
           <div class="write-main">
             <!-- 文章信息栏 -->
@@ -124,17 +128,14 @@
 
             <!-- 底部按钮 -->
             <div class="editor-actions">
-                <button type="button" class="form-button add-image-button">
+        <button type="button" id="add-image-button" class="form-button add-image-button">
                     <i class="fas fa-image"></i>
                     添加图片
                 </button>
+        <div id="cover-preview" style="margin-left:auto;"></div>
                 <button type="button" id="submit-button" class="form-button submit-button">
                     <i class="fas fa-check"></i>
                     发布文章
-                </button>
-                <button type="button" class="form-button cancel-button">
-                    <i class="fas fa-times"></i>
-                    取消
                 </button>
             </div>
           </div>
